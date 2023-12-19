@@ -8,7 +8,7 @@ Estou empolgado em compartilhar meu mais recente projeto, no qual liderei a impl
 Desenvolvemos uma solução robusta para coletar dados públicos de diversas fontes online, utilizando técnicas avançadas de raspagem. O objetivo principal foi criar um sistema automatizado que economizasse tempo, aumentasse a precisão na coleta de dados e proporcionasse insights estratégicos para impulsionar a excelência em análises.
 
 🛠️ Tecnologias Utilizadas:
-Implementamos tecnologias de ponta para garantir a eficiência e a confiabilidade do processo de raspagem. Ferramentas como [mencionar as ferramentas específicas, como BeautifulSoup, Scrapy, Selenium, etc.] foram integradas de maneira sinérgica para garantir a captura eficaz e segura dos dados.
+Implementamos tecnologias de ponta para garantir a eficiência e a confiabilidade do processo de raspagem. Ferramentas como [mencionar as ferramentas específicas, como BeautifulSoup, Pandas, Selenium, etc.] foram integradas de maneira sinérgica para garantir a captura eficaz e segura dos dados.
 
 💡 Resultados Alcançados:
 O projeto resultou em uma significativa redução no tempo dedicado à coleta manual de dados, permitindo que a equipe se concentrasse em análises mais avançadas e estratégicas. Além disso, a automação contribuiu para a minimização de erros humanos, promovendo a precisão e confiabilidade dos dados obtidos.
