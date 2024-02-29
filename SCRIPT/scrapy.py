@@ -8,7 +8,7 @@ import pandas as pd
 # Configuring Chrome Driver
 options = webdriver.ChromeOptions()
 options.add_experimental_option("prefs", {
-  "download.default_directory": r"C:\Users\ppedr\OneDrive\Área de Trabalho\davi estudo\APS\downalod"})  # 
+  "download.default_directory": r"C:\Users\ppedr\OneDrive\Área de Trabalho\davi estudo\APS\downalod"})  # alter directory for you !!!!!!!!
 driver = webdriver.Chrome(options=options)
 
 # URL page
