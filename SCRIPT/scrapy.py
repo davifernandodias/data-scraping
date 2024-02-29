@@ -5,19 +5,19 @@ import time
 import os
 import pandas as pd
 
-# Configurando o driver do Chrome
+# Configuring Chrome Driver
 options = webdriver.ChromeOptions()
 options.add_experimental_option("prefs", {
-  "download.default_directory": r"C:\Users\ppedr\OneDrive\Área de Trabalho\davi estudo\APS\downalod"}) 
+  "download.default_directory": r"C:\Users\ppedr\OneDrive\Área de Trabalho\davi estudo\APS\downalod"})  # 
 driver = webdriver.Chrome(options=options)
 
-# URL da página
+# URL page
 url = "https://www.ssp.sp.gov.br/transparenciassp/Consulta2022.aspx"
 
-# Abre a página no navegador
+# Get page of WEB
 driver.get(url)
 
-# Selecionar furtos de veículos
+# Select car theft
 furtos_veiculos = driver.find_element(By.ID, "cphBody_btnFurtoVeiculo")
 furtos_veiculos.click()
 
@@ -26,7 +26,7 @@ meses = [12]
 
 
 
-# Lista para armazenar os dados
+# List for get data
 dados = []
 
 for ano in anos:
@@ -38,14 +38,14 @@ for ano in anos:
         btn_exportar = driver.find_element(By.ID, "cphBody_ExportarBOLink")
         btn_exportar.click()
 
-        # Esperar até que o arquivo seja baixado completamente (aguarda até 60 segundos)
+        # sleep 30s
         tempo_espera = 0
         while not os.path.exists(r"C:\Users\ppedr\OneDrive\Área de Trabalho\davi estudo\APS\downalod\DadosBO_20"+ str(ano) + "_"+str(mes) + "(FURTO DE VEÍCULOS).xls"):
             time.sleep(1)
             tempo_espera += 1
 
 
-for ano in anos:
+for ano in anos: # convert xlsx to csv
     for mes in meses:
         pathname = r"C:\Users\ppedr\OneDrive\Área de Trabalho\davi estudo\APS\downalod\DadosBO_20"+ str(ano) + "_"+str(mes) + "(FURTO DE VEÍCULOS).xls"
         if os.path.exists(pathname):
@@ -53,16 +53,11 @@ for ano in anos:
             read_file.to_csv(r"C:\Users\ppedr\OneDrive\Área de Trabalho\davi estudo\APS\downalod\csv\DadosBO_20"+ str(ano) + "_"+str(mes) + "(FURTO DE VEÍCULOS).csv", index= None, header= True)
             
             
-        # Carregar os dados do arquivo CSV usando pandas
-#       if os.path.exists(r"C:\Users\cadug\OneDrive\Imagens\Faculdade\dados.csv"):
-#          df = pd.read_csv(r"C:\Users\cadug\OneDrive\Imagens\Faculdade\dados.csv", sep=';', encoding='latin1')
-#          dados.append(df)
 
-# Combinar todos os DataFrames em um único DataFrame
-#dados_completos = pd.concat(dados, ignore_index=True)
 
-# Salvar os dados como um arquivo CSV
-#dados_completos.to_csv('dados_completos.csv', index=False)
 
-# Fechar o navegador
+
+
+
+# exit web
 driver.quit()
